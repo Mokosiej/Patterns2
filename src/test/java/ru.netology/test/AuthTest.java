@@ -56,8 +56,8 @@ class AuthTest {
         @DisplayName("Should get error message if login with blocked registered user")
         void shouldGetErrorIfBlockedUser() {
             var blockedUser = getRegisteredUser("blocked");
-            $("[data-test-id='login'] .input_control").setValue(blockedUser.getLogin());
-            $("[data-test-id='password'] .input_control").setValue(blockedUser.getPassword());
+            $("[data-test-id='login'] input").setValue(blockedUser.getLogin());
+            $("[data-test-id='password'] input").setValue(blockedUser.getPassword());
             $("button.button").click();
             $("[data-test-id='error-notification'] .notification__content")
                     .shouldHave(text("Ошибка! Пользователь заблокирован"))
