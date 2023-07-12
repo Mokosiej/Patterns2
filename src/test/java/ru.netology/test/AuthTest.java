@@ -5,7 +5,6 @@ import com.codeborne.selenide.logevents.SelenideLogger;
 import org.junit.jupiter.api.*;
 
 import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
